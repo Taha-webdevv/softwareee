@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | ByteMarket</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header id="main-header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">ByteMarket</a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Search products...">
+          <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        <a href="cart.html" class="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </a>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <section class="products-header">
+      <div class="container">
+        <h1>Our Products</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> / <span>Products</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="products-container">
+      <div class="container">
+        <div class="products-grid-container">
+          <aside class="filters">
+            <div class="filter-group">
+              <h3>Categories</h3>
+              <ul>
+                <li>
+                  <button class="filter-btn active" data-category="all">All Products</button>
+                </li>
+                <li>
+                  <button class="filter-btn" data-category="software">Software</button>
+                </li>
+                <li>
+                  <button class="filter-btn" data-category="ebooks">E-Books</button>
+                </li>
+              </ul>
+            </div>
+            <div class="filter-group">
+              <h3>Price Range</h3>
+              <div class="price-range">
+                <input type="range" id="price-filter" min="0" max="200" value="200" class="slider">
+                <div class="price-labels">
+                  <span>$0</span>
+                  <span id="price-value">$200+</span>
+                </div>
+              </div>
+            </div>
+            <div class="filter-group">
+              <h3>Rating</h3>
+              <ul class="rating-filter">
+                <li>
+                  <button class="rating-btn" data-rating="4">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="far fa-star"></i> & Up
+                  </button>
+                </li>
+                <li>
+                  <button class="rating-btn" data-rating="3">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="far fa-star"></i><i class="far fa-star"></i> & Up
+                  </button>
+                </li>
+                <li>
+                  <button class="rating-btn" data-rating="2">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i> & Up
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <button id="clear-filters" class="btn btn-secondary">Clear Filters</button>
+          </aside>
+
+          <div class="products-main">
+            <div class="products-header-actions">
+              <div class="products-count">
+                <span id="product-count">0</span> products
+              </div>
+              <div class="sort-options">
+                <label for="sort-select">Sort by:</label>
+                <select id="sort-select">
+                  <option value="featured">Featured</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="rating">Highest Rated</option>
+                  <option value="newest">Newest</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="product-grid" id="products-grid">
+              <!-- Products will be inserted here by JavaScript -->
+              <div class="loading-spinner">
+                <div class="spinner"></div>
+                <p>Loading products...</p>
+              </div>
+            </div>
+
+            <div id="no-results" class="no-results hidden">
+              <i class="fas fa-search"></i>
+              <h3>No products found</h3>
+              <p>Try adjusting your filters or search terms</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>ByteMarket</h3>
+          <p>Your trusted source for premium software tools and expert e-books since 2023.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="products.html?category=software">Software</a></li>
+            <li><a href="products.html?category=ebooks">E-Books</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 ByteMarket. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/utils.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
