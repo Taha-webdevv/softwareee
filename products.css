@@ -1,0 +1,232 @@
+/* Products Header */
+.products-header {
+  background-color: var(--color-primary);
+  color: white;
+  padding: var(--space-4) 0;
+  margin-bottom: var(--space-4);
+}
+
+.products-header h1 {
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.products-header .breadcrumb {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.products-header .breadcrumb a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.products-header .breadcrumb a:hover {
+  color: white;
+}
+
+.products-header .breadcrumb span {
+  color: white;
+}
+
+/* Products Grid Container */
+.products-grid-container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+/* Filters */
+.filters {
+  background-color: white;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-3);
+  align-self: start;
+  position: sticky;
+  top: 80px;
+}
+
+.filter-group {
+  margin-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-neutral-200);
+  padding-bottom: var(--space-3);
+}
+
+.filter-group:last-of-type {
+  border-bottom: none;
+}
+
+.filter-group h3 {
+  font-size: 1rem;
+  margin-bottom: var(--space-2);
+}
+
+.filter-group ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  text-align: left;
+  color: var(--color-neutral-700);
+  font-size: 0.875rem;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  transition: color var(--transition-fast);
+}
+
+.filter-btn:hover {
+  color: var(--color-primary);
+}
+
+.filter-btn.active {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.price-range {
+  margin-top: var(--space-2);
+}
+
+.slider {
+  width: 100%;
+  height: 4px;
+  appearance: none;
+  background: var(--color-neutral-300);
+  outline: none;
+  border-radius: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  cursor: pointer;
+  border: none;
+}
+
+.price-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: var(--color-neutral-700);
+}
+
+.rating-filter li {
+  margin-bottom: 0.25rem;
+}
+
+.rating-btn {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--color-neutral-700);
+  font-size: 0.875rem;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  transition: color var(--transition-fast);
+}
+
+.rating-btn:hover {
+  color: var(--color-primary);
+}
+
+.rating-btn i {
+  color: var(--color-warning);
+}
+
+#clear-filters {
+  width: 100%;
+  margin-top: var(--space-2);
+}
+
+/* Products Main */
+.products-header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-neutral-200);
+}
+
+.products-count {
+  font-size: 0.875rem;
+  color: var(--color-neutral-700);
+}
+
+.sort-options {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sort-options label {
+  margin-bottom: 0;
+  font-size: 0.875rem;
+  color: var(--color-neutral-700);
+}
+
+#sort-select {
+  padding: 0.5rem;
+  border-radius: var(--border-radius-md);
+  font-size: 0.875rem;
+  width: auto;
+}
+
+/* No Results */
+.no-results {
+  text-align: center;
+  padding: var(--space-5) 0;
+  color: var(--color-neutral-600);
+}
+
+.no-results i {
+  font-size: 3rem;
+  margin-bottom: var(--space-2);
+  color: var(--color-neutral-400);
+}
+
+.no-results h3 {
+  margin-bottom: var(--space-1);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .products-grid-container {
+    grid-template-columns: 220px 1fr;
+    gap: var(--space-3);
+  }
+}
+
+@media (max-width: 768px) {
+  .products-grid-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .filters {
+    position: static;
+    margin-bottom: var(--space-3);
+  }
+  
+  .filter-group {
+    margin-bottom: var(--space-2);
+    padding-bottom: var(--space-2);
+  }
+}

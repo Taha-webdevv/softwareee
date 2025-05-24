@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | ByteMarket</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/checkout.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header id="main-header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">ByteMarket</a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="cart.html" class="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </a>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <div class="container">
+      <div class="checkout-header">
+        <h1>Checkout</h1>
+        <div class="checkout-steps">
+          <div class="step active">
+            <div class="step-number">1</div>
+            <span>Customer Info</span>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <span>Payment</span>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <span>Confirmation</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="checkout-container">
+        <div class="checkout-form-container">
+          <form id="checkout-form" class="checkout-form">
+            <div class="form-step active" id="customer-info">
+              <h2>Customer Information</h2>
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+                <span class="error-message"></span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error-message"></span>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="country">Country</label>
+                  <select id="country" name="country" required>
+                    <option value="" selected disabled>Select country</option>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="AU">Australia</option>
+                    <option value="DE">Germany</option>
+                    <option value="FR">France</option>
+                    <option value="JP">Japan</option>
+                  </select>
+                  <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                  <label for="zip">Zip/Postal Code</label>
+                  <input type="text" id="zip" name="zip" required>
+                  <span class="error-message"></span>
+                </div>
+              </div>
+              <div class="form-navigation">
+                <a href="cart.html" class="btn btn-secondary">Back to Cart</a>
+                <button type="button" id="to-payment-btn" class="btn btn-primary">Continue to Payment</button>
+              </div>
+            </div>
+
+            <div class="form-step" id="payment-info">
+              <h2>Payment Information</h2>
+              <div class="form-group">
+                <label for="card-number">Card Number</label>
+                <div class="card-input-container">
+                  <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required maxlength="19">
+                  <div class="card-types">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                  </div>
+                </div>
+                <span class="error-message"></span>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="expiry">Expiry Date</label>
+                  <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required maxlength="5">
+                  <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                  <label for="cvv">CVV</label>
+                  <input type="text" id="cvv" name="cvv" placeholder="123" required maxlength="4">
+                  <span class="error-message"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name-on-card">Name on Card</label>
+                <input type="text" id="name-on-card" name="name-on-card" required>
+                <span class="error-message"></span>
+              </div>
+              <div class="form-navigation">
+                <button type="button" id="back-to-customer-btn" class="btn btn-secondary">Back</button>
+                <button type="button" id="place-order-btn" class="btn btn-primary">Place Order</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        
+        <div class="order-summary">
+          <h2>Order Summary</h2>
+          <div id="checkout-items">
+            <!-- Order items will be inserted here by JavaScript -->
+          </div>
+          <div class="summary-totals">
+            <div class="summary-line">
+              <span>Subtotal</span>
+              <span id="checkout-subtotal">$0.00</span>
+            </div>
+            <div class="summary-line">
+              <span>Tax (8%)</span>
+              <span id="checkout-tax">$0.00</span>
+            </div>
+            <div class="summary-line total">
+              <span>Total</span>
+              <span id="checkout-total">$0.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="processing-overlay" class="processing-overlay hidden">
+    <div class="processing-content">
+      <div class="processing-spinner"></div>
+      <h2>Processing Your Order</h2>
+      <p>Please wait while we process your payment...</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>ByteMarket</h3>
+          <p>Your trusted source for premium software tools and expert e-books since 2023.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="products.html?category=software">Software</a></li>
+            <li><a href="products.html?category=ebooks">E-Books</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 ByteMarket. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/utils.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/checkout.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

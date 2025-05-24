@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ByteMarket | Premium Software & E-books</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header id="main-header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">ByteMarket</a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Search products...">
+          <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        <a href="cart.html" class="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </a>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Empowering Creators & Learners</h1>
+          <p>Discover premium software tools and expert e-books to enhance your digital journey</p>
+          <div class="hero-cta">
+            <a href="products.html" class="btn btn-primary">Explore Products</a>
+            <a href="#featured" class="btn btn-secondary">View Featured</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories">
+      <div class="container">
+        <h2>Browse Categories</h2>
+        <div class="category-cards">
+          <a href="products.html?category=software" class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3>Software</h3>
+            <p>Premium tools for developers, designers, and content creators</p>
+          </a>
+          <a href="products.html?category=ebooks" class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-book"></i>
+            </div>
+            <h3>E-Books</h3>
+            <p>In-depth guides and tutorials from industry experts</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured" class="featured-products">
+      <div class="container">
+        <h2>Featured Products</h2>
+        <div class="product-grid" id="featured-products-grid">
+          <!-- Products will be inserted here by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-slider">
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <p>"ByteMarket's development tools have completely transformed my workflow. The code editor is intuitive and powerful."</p>
+            </div>
+            <div class="testimonial-author">
+              <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=60" alt="Customer">
+              <div>
+                <h4>Alex Johnson</h4>
+                <p>Frontend Developer</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <p>"The UX Design e-book series provided practical insights that helped me secure my first design role at a major tech company."</p>
+            </div>
+            <div class="testimonial-author">
+              <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=60" alt="Customer">
+              <div>
+                <h4>Sarah Chen</h4>
+                <p>UX Designer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="container">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter for exclusive deals and new product announcements</p>
+        <form id="newsletter-form">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>ByteMarket</h3>
+          <p>Your trusted source for premium software tools and expert e-books since 2023.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="products.html?category=software">Software</a></li>
+            <li><a href="products.html?category=ebooks">E-Books</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 ByteMarket. All rights reserved. Made by Muhammad Taha Siddiqui</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/utils.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
